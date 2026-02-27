@@ -31,7 +31,7 @@ const Dashboard = () => {
               </svg>
             </div>
             <h1 className="text-xl font-bold tracking-widest uppercase text-white">
-              Panel <span className="text-primary font-light">Admin</span>
+              Panel de <span className="text-primary font-light">Administración</span>
             </h1>
           </div>
           <div className="flex items-center gap-4">

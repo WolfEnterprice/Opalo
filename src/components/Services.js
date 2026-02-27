@@ -25,7 +25,7 @@ const Services = () => {
               {service.description}
             </p>
             <p className="text-primary text-sm font-bold">
-              ${service.price.toLocaleString()} MXN
+              ${service.price.toLocaleString('es-CO')} COP
             </p>
           </div>
         ))}

@@ -14,7 +14,7 @@ const ReservationsManagement = () => {
   const formatDate = (dateString) => {
     if (!dateString) return 'N/A';
     const date = new Date(dateString);
-    return date.toLocaleDateString('es-MX', {
+    return date.toLocaleDateString('es-CO', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -63,7 +63,7 @@ const ReservationsManagement = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-primary text-2xl font-bold">
-                        ${reservation.total?.toLocaleString()} MXN
+                        ${reservation.total?.toLocaleString('es-CO')} COP
                       </p>
                       <p className="text-white/40 text-xs">
                         {formatDate(reservation.createdAt)}
@@ -83,11 +83,11 @@ const ReservationsManagement = () => {
                       <p className="text-white font-medium">{reservation.guests}</p>
                     </div>
                     <div>
-                      <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Check-in</p>
+                      <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Llegada</p>
                       <p className="text-white font-medium">{reservation.checkIn}</p>
                     </div>
                     <div>
-                      <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Check-out</p>
+                      <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Salida</p>
                       <p className="text-white font-medium">{reservation.checkOut}</p>
                     </div>
                   </div>

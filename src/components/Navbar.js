@@ -29,25 +29,31 @@ const Navbar = () => {
           <a href="#filosofia" className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors">
             Filosofía
           </a>
+          <a href="#ubicacion" className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors">
+            Ubicación
+          </a>
           <button
             onClick={() => navigate('/reservar')}
             className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-primary/20"
           >
-            Check Availability
+            Reservar
           </button>
           <Link
             to="/admin"
             className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors"
           >
-            Admin
+            Administración
           </Link>
         </div>
 
         <button
-          className="md:hidden text-white"
+          type="button"
+          className="md:hidden text-white p-2 rounded-lg hover:bg-white/5 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
         >
-          <span className="material-symbols-outlined">
+          <span className="material-symbols-outlined" aria-hidden="true">
             {mobileMenuOpen ? 'close' : 'menu'}
           </span>
         </button>
@@ -65,6 +71,9 @@ const Navbar = () => {
             <a href="#filosofia" className="block text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors">
               Filosofía
             </a>
+            <a href="#ubicacion" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors">
+              Ubicación
+            </a>
             <button
               onClick={() => {
                 navigate('/reservar');
@@ -72,14 +81,14 @@ const Navbar = () => {
               }}
               className="w-full bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all"
             >
-              Check Availability
+              Reservar
             </button>
             <Link
               to="/admin"
               onClick={() => setMobileMenuOpen(false)}
               className="block text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition-colors"
             >
-              Admin
+              Administración
             </Link>
           </div>
         </div>

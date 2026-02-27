@@ -76,7 +76,7 @@ const SuitesManagement = () => {
               <h3 className="serif-text text-2xl text-white mb-2">{suite.name}</h3>
               <p className="text-white/60 text-sm mb-4">{suite.description}</p>
               <p className="text-primary text-lg font-bold mb-4">
-                ${suite.price.toLocaleString()} MXN/noche
+                ${suite.price.toLocaleString('es-CO')} COP el rato
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <span className={`text-xs px-2 py-1 rounded ${suite.available ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
@@ -151,7 +151,7 @@ const SuitesManagement = () => {
               </div>
               <div>
                 <label className="block text-white text-sm font-bold mb-2 uppercase tracking-wider">
-                  Precio por Noche (MXN)
+                  Precio el rato (COP)
                 </label>
                 <input
                   type="number"

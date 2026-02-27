@@ -78,7 +78,7 @@ const ServicesManagement = () => {
             <h3 className="text-white text-xl font-bold mb-2">{service.name}</h3>
             <p className="text-white/60 text-sm mb-4">{service.description}</p>
             <p className="text-primary text-lg font-bold mb-4">
-              ${service.price.toLocaleString()} MXN
+              ${service.price.toLocaleString('es-CO')} COP
             </p>
             <div className="flex gap-2">
               <button
@@ -156,7 +156,7 @@ const ServicesManagement = () => {
               </div>
               <div>
                 <label className="block text-white text-sm font-bold mb-2 uppercase tracking-wider">
-                  Precio (MXN)
+                  Precio (COP)
                 </label>
                 <input
                   type="number"

@@ -15,19 +15,27 @@ export const AppProvider = ({ children }) => {
   const [suites, setSuites] = useState([
     {
       id: 1,
-      name: 'Ópalo Black',
-      description: 'Mármol, Cuero y Obsidiana',
+      name: 'Ópalo Sencilla',
+      description: 'Elegancia minimalista y confort íntimo',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCcBAwc9DMBjju6uD_KBj9LrI4Fl7hSeB2tV1lhS8obd5_QtPEJ3r25t5NDcvzuu8QM3jwO4zn9z1pokg6IlvbhoWg6K0053a7kv7D8tRFelHgIWq9hi3biM-Ew1lOuq7-kz_PcqYimDq2SWIn5KbeYjMbAYbxVsnMBwjaiHhz5vN4uCCJsy73U9pnQ_9DjOoi2jvBQbQZVZKn6ScXTJtgc6Qg55B17BzB6_II4D8P3FhcgvPhCgOJqrYafFqTzkb35uA4IT6TBkxE',
-      price: 5000,
-      available: true
+      price: 60000,
+      available: true,
+      benefits: ['Cama king size', 'Ducha de lluvia', '45 m²', 'TV Smart', 'WiFi premium'],
+      amenities: ['tv', 'aire-acondicionado', 'minibar', 'caja-fuerte'],
+      idealFor: 'Escapadas íntimas y parejas',
+      size: '45 m²'
     },
     {
       id: 2,
-      name: 'Ópalo Gold',
-      description: 'Ámbar, Terciopelo y Resplandor',
+      name: 'Ópalo Suite',
+      description: 'Lujo total con vistas y exclusividad',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCB2ja4JBZZmye3AW_l4-4I0uwfYXqyVYVhEpvt3829HUyFXcHoduk0IPHGGd1109kSqCBH1ItsELCr8oxNc0hZrofDMMzBTE6xAGo_vXnLgST1n6cVqD-oRivX4JYCo5c_kYZ8l06c734nA7Xn-jLiHUB-cJjsCfelVRllCDyqsvb60jmz3BSM87p7n5D7aI_v0L8HzFKGHsXicy3lbqx7lqj0DDa--YVdIYxKJGVsbafF4icwIx58B4q7lfQOpYr2dnRpIKpM878',
-      price: 6000,
-      available: true
+      price: 100000,
+      available: true,
+      benefits: ['Jacuzzi privado', 'Terraza con vista', '60 m²', 'Minibar incluido', 'Servicio de habitación'],
+      amenities: ['tv', 'aire-acondicionado', 'minibar', 'jacuzzi', 'terraza', 'caja-fuerte'],
+      idealFor: 'Aniversarios y celebraciones especiales',
+      size: '60 m²'
     }
   ]);
 
@@ -37,21 +45,14 @@ export const AppProvider = ({ children }) => {
       name: 'Decoración Romántica',
       description: 'Pétalos de rosa, velas artesanales y aromas que envuelven la atmósfera en misterio.',
       icon: 'loyalty',
-      price: 1500
+      price: 60000
     },
     {
       id: 2,
-      name: 'Catering Gourmet',
+      name: 'Catering Gourmet (persona extra)',
       description: 'Selección premium de cava, fresas con chocolate y delicias para despertar el paladar.',
       icon: 'bubbles',
-      price: 2500
-    },
-    {
-      id: 3,
-      name: 'Wellness Privado',
-      description: 'Kit de amenidades de lujo, aceites esenciales y sales de baño para una relajación total.',
-      icon: 'self_care',
-      price: 1200
+      price: 25000
     }
   ]);
 
