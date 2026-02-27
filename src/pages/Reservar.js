@@ -35,6 +35,16 @@ const Reservar = () => {
     }
   }, [preselectedId, suites]);
 
+  // Siempre empezar desde arriba al entrar a la página
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Al cambiar de suite (Sencilla ↔ Suite), volver arriba para ver todo desde el inicio
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [formData.suiteId]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const selectedSuite = suites.find(s => s.id === parseInt(formData.suiteId));
