@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-white font-bold mb-8 uppercase tracking-widest text-sm">Explora</h3>
-            <ul className="space-y-4" role="list">
+            <ul className="space-y-4">
               <li>
                 <a href="#suites" className="text-white/40 hover:text-primary transition-colors text-sm">
                   Nuestras Suites
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-white font-bold mb-8 uppercase tracking-widest text-sm">Contacto</h3>
-            <ul className="space-y-4" role="list">
+            <ul className="space-y-4">
               <li>
                 <a
                   href={PHONE_LINK}
@@ -114,10 +114,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Ópalo Suites. Todos los derechos reservados.
           </p>
           <div className="flex gap-8">
-            <a href="#" className="text-white/20 hover:text-white transition-colors text-xs uppercase tracking-widest">
+            <a href="/privacidad" className="text-white/20 hover:text-white transition-colors text-xs uppercase tracking-widest">
               Privacidad
             </a>
-            <a href="#" className="text-white/20 hover:text-white transition-colors text-xs uppercase tracking-widest">
+            <a href="/terminos" className="text-white/20 hover:text-white transition-colors text-xs uppercase tracking-widest">
               Términos
             </a>
           </div>

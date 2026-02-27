@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 
 const ReservationsManagement = () => {
-  const { reservations, updateReservation, deleteReservation } = useApp();
+  const { reservations, deleteReservation } = useApp();
   const [filter, setFilter] = useState('all');
 
   const filteredReservations = reservations.filter(res => {
