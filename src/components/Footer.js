@@ -41,22 +41,22 @@ const Footer = () => {
             <h3 className="text-white font-bold mb-8 uppercase tracking-widest text-sm">Explora</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#suites" className="text-white/40 hover:text-primary transition-colors text-sm">
+                <a href="#suites" className="text-white/40 hover:text-primary transition-colors duration-200 text-sm inline-block hover:underline underline-offset-2">
                   Nuestras Suites
                 </a>
               </li>
               <li>
-                <a href="#experiencias" className="text-white/40 hover:text-primary transition-colors text-sm">
+                <a href="#experiencias" className="text-white/40 hover:text-primary transition-colors duration-200 text-sm inline-block hover:underline underline-offset-2">
                   Experiencias
                 </a>
               </li>
               <li>
-                <Link to="/reservar" className="text-white/40 hover:text-primary transition-colors text-sm">
+                <Link to="/reservar" className="text-white/40 hover:text-primary transition-colors duration-200 text-sm inline-block hover:underline underline-offset-2">
                   Reservaciones
                 </Link>
               </li>
               <li>
-                <a href="#ubicacion" className="text-white/40 hover:text-primary transition-colors text-sm">
+                <a href="#ubicacion" className="text-white/40 hover:text-primary transition-colors duration-200 text-sm inline-block hover:underline underline-offset-2">
                   Ubicación
                 </a>
               </li>
@@ -70,7 +70,7 @@ const Footer = () => {
             </p>
             <a
               href="#ubicacion"
-              className="text-primary text-sm font-bold inline-flex items-center gap-2 hover:text-primary/90 transition-colors"
+              className="text-primary text-sm font-bold inline-flex items-center gap-2 hover:text-primary/90 transition-colors duration-200 hover:underline underline-offset-2"
               aria-label="Ver ubicación en mapa"
             >
               <span className="material-symbols-outlined text-lg" aria-hidden="true">location_on</span>
@@ -135,7 +135,7 @@ const Footer = () => {
           <span className="opacity-0 group-hover:opacity-100 bg-zinc-900 text-white text-xs py-2 px-4 rounded-lg border border-white/10 transition-all duration-300 -translate-x-2 group-hover:translate-x-0 whitespace-nowrap uppercase tracking-widest font-bold pointer-events-none">
             ¿Alguna duda?
           </span>
-          <div className="size-14 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 hover:scale-110 transition-transform" aria-hidden="true">
+          <div className="size-14 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 hover:scale-110 transition-transform duration-300 animate-pulse-soft" aria-hidden="true">
             <span className="material-symbols-outlined text-2xl">chat_bubble</span>
           </div>
         </div>

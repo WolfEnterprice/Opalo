@@ -14,9 +14,9 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {services.map((service) => (
-          <div key={service.id} className="group text-center">
+          <div key={service.id} className="group text-center p-6 rounded-2xl border border-white/5 hover:border-white/10 hover:bg-white/[0.02] transition-all duration-300">
             <div className="mb-8 relative inline-block">
-              <div className="size-20 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+              <div className="size-20 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-primary/20">
                 <span className="material-symbols-outlined text-3xl">{service.icon}</span>
               </div>
             </div>

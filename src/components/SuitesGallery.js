@@ -33,17 +33,17 @@ const SuitesGallery = () => {
         {suites.map((suite) => (
           <div
             key={suite.id}
-            className="group relative flex flex-col h-full bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10"
+            className="group relative flex flex-col h-full bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-1"
           >
             <div className="relative aspect-[4/3] overflow-hidden shrink-0">
               <img
                 alt={suite.name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 src={suite.image}
               />
               <div className="absolute inset-0 suite-card-gradient" />
               <div className="absolute top-3 right-3">
-                <span className="bg-primary/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
+                <span className="bg-primary/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg shadow-black/20">
                   {suite.idealFor || 'Experiencia exclusiva'}
                 </span>
               </div>
@@ -52,8 +52,8 @@ const SuitesGallery = () => {
                 <p className="text-white/70 text-xs uppercase tracking-widest mb-2">
                   {suite.description}
                 </p>
-                <p className="text-primary text-lg font-bold">
-                  ${suite.price?.toLocaleString('es-CO')} COP <span className="text-white/50 text-sm font-normal">el rato</span>
+                <p className="inline-flex items-baseline gap-1.5 rounded-lg bg-black/40 backdrop-blur-sm px-2.5 py-1 text-primary text-lg font-bold">
+                  ${suite.price?.toLocaleString('es-CO')} COP <span className="text-white/60 text-sm font-normal">el rato</span>
                 </p>
               </div>
             </div>
@@ -86,7 +86,7 @@ const SuitesGallery = () => {
               <button
                 type="button"
                 onClick={() => navigate('/reservar', { state: { preselectedSuite: suite.id } })}
-                className="mt-auto w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30"
+                className="mt-auto w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-zinc-900"
                 aria-label={`Reservar ${suite.name}`}
               >
                 Reservar esta suite

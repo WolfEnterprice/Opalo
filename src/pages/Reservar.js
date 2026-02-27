@@ -72,6 +72,18 @@ const Reservar = () => {
           <p className="text-white/60">Elige tu suite ideal y completa el formulario para realizar tu reservación</p>
         </div>
 
+        <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-2">
+            <span className="flex items-center justify-center size-10 rounded-full bg-primary text-white text-sm font-bold">1</span>
+            <span className="text-white/60 text-xs uppercase tracking-wider">Elige suite</span>
+          </div>
+          <div className="h-px flex-1 max-w-[80px] bg-white/20" aria-hidden="true" />
+          <div className="flex items-center gap-2">
+            <span className="flex items-center justify-center size-10 rounded-full bg-white/20 text-white/60 text-sm font-bold">2</span>
+            <span className="text-white/40 text-xs uppercase tracking-wider">Tus datos</span>
+          </div>
+        </div>
+
         <div className="mb-12">
           <h2 className="text-white text-sm font-bold uppercase tracking-wider mb-6">
             Paso 1 — Selecciona tu Suite
@@ -84,7 +96,7 @@ const Reservar = () => {
                 onClick={() => setFormData(prev => ({ ...prev, suiteId: suite.id }))}
                 className={`text-left rounded-2xl overflow-hidden border-2 transition-all duration-300 ${
                   String(formData.suiteId) === String(suite.id)
-                    ? 'border-primary bg-primary/10 shadow-lg shadow-primary/20'
+                    ? 'border-primary ring-2 ring-primary/50 bg-primary/10 shadow-xl shadow-primary/25'
                     : 'border-white/10 bg-zinc-900/50 hover:border-white/30'
                 }`}
               >
@@ -133,9 +145,12 @@ const Reservar = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h2 className="text-white text-sm font-bold uppercase tracking-wider mb-6">
-            Paso 2 — Detalles de tu Reserva
-          </h2>
+          <div className="flex items-center gap-4 mb-6">
+            <span className="flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary text-xs font-bold">2</span>
+            <h2 className="text-white text-sm font-bold uppercase tracking-wider m-0">
+              Detalles de tu Reserva
+            </h2>
+          </div>
           {selectedSuite && (
             <div className="mb-6 p-4 bg-white/5 rounded-xl border border-white/10 flex items-center justify-between">
               <div>
@@ -260,7 +275,7 @@ const Reservar = () => {
             <button
               type="submit"
               disabled={!formData.suiteId}
-              className="w-full bg-primary hover:bg-primary/90 disabled:bg-zinc-700 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-all shadow-lg shadow-primary/20"
+              className="w-full bg-primary hover:bg-primary/90 disabled:bg-zinc-700 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/40 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-zinc-900"
             >
               Confirmar Reservación
             </button>

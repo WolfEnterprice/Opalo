@@ -2,10 +2,10 @@ import React from 'react';
 
 const Philosophy = () => {
   return (
-    <section id="filosofia" className="py-40 bg-zinc-950 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-primary to-transparent"></div>
+    <section id="filosofia" className="py-32 md:py-40 bg-zinc-950 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden border-y border-white/5">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-primary/60 to-transparent"></div>
       <div className="relative z-10">
-        <span className="material-symbols-outlined text-primary text-5xl mb-8 opacity-50">
+        <span className="material-symbols-outlined text-primary text-5xl mb-8 opacity-60 transition-transform duration-300 hover:scale-110" aria-hidden="true">
           flare
         </span>
         <h2 className="serif-text text-5xl md:text-7xl text-white italic max-w-4xl leading-tight">
